@@ -26,7 +26,7 @@ let playerNo = 0;
 let roomID;
 
 
-const socket = io("http://localhost:3000", {
+const socket = io("https://ping-pong-game-backend.onrender.com", {
     transports: ['websocket']
 });
 
