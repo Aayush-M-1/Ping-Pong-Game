@@ -6,6 +6,7 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 const cors = require('cors');
 const { futimesSync } = require('fs');
+require('dotenv').config()
 
 app.use(cors({
     origin: '*'
@@ -199,8 +200,8 @@ function startGame(room) {
     }, 1000 / 60);
 }
 
+const port = process.env.PORT || 3000;
 
-
-server.listen(3000, () => {
-    console.log('listening on *:3000');
+server.listen(port, () => {
+    console.log(`listening on ${port}`);
 });
